@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo List - Sign Up</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #ffe6e6, #ffffcc);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .signup-container {
+      background-color: #fff9e6;
+      padding: 2rem;
+      border-radius: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      text-align: center;
+      border: 4px dashed #ffb3b3;
+    }
+
+    .signup-container h2 {
+      font-size: 2rem;
+      color: #ff6666;
+      margin-bottom: 1.5rem;
+    }
+
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 2px solid #ffcccb;
+      border-radius: 1rem;
+      font-size: 1rem;
+      background-color: #fffaf0;
+    }
+
+    .signup-container input:focus {
+      border-color: #ff9999;
+      outline: none;
+    }
+
+    .signup-container button {
+      background-color: #ff6666;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .signup-container button:hover {
+      background-color: #ff4d4d;
+    }
+
+    .signup-container p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Create Your ToDo Account</h2>
+    <form method="post">
+        {% csrf_token %}
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html" style="color: #ff6666; text-decoration: none;">Login here</a></p>
+  </div>
+</body>
+</html>
