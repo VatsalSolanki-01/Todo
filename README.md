@@ -25,20 +25,29 @@ A simple and functional To-Do List web application built with **Python** and **D
 
 ---
 
-## 📂 Project Structure
-todo_project/
-├── manage.py                # Django project manager
-├── db.sqlite3               # Default SQLite database
-├── static/                  # Static files (CSS, JS)
-├── templates/               # Shared HTML templates
-│
-├── todo_app/                # Main app for task management
-│   ├── models.py            # Task model
-│   ├── views.py             # Views for CRUD operations
-│   ├── forms.py             # Django forms for tasks
-│   └── urls.py              # URL routing for task views
-│
-├── users/                   # Handles user registration & login
-│   ├── views.py             # Views for authentication
-│   ├── forms.py             # Django forms for user auth
-│   └── urls.py              # URL routing for user auth
+📁 Project Structure (Descriptive Format)
+The project is organized into a main root directory called todo_project, which contains essential files like manage.py for Django’s command-line utilities and the default SQLite database file db.sqlite3.
+
+There are two main Django apps:
+
+todo_app – This is the core application responsible for managing tasks. It includes:
+
+models.py to define the Task model.
+
+views.py for handling task-related logic such as listing, creating, updating, and deleting tasks.
+
+forms.py for Django forms related to task input.
+
+urls.py to define routes specific to the task operations.
+
+users – This app manages user authentication. It contains:
+
+views.py for login, logout, and registration logic.
+
+forms.py for user-related forms like sign-up and login.
+
+urls.py for user-specific routing.
+
+The project also includes a templates directory for storing HTML templates and a static directory to hold static files like CSS and JavaScript.
+
+
