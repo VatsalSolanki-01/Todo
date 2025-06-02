@@ -117,13 +117,11 @@
   <div class="todo-container">
     <h1>Hello {{ user }} !!</h1>
     <h2>Get things done?</h2>
-    <div>
-      <a href="{% url 'signout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
-    </div>
+    <i class="fa-solid fa-right-from-bracket"></i>
     <form method="post">
       {% csrf_token %}
-      <input type="text" name="title" placeholder="Add today's task">
-      <input type="submit" class="submit button" value="Add Task">
+      <input type="text" name="title" placeholder="Add today's task" value={{obj.title}}>
+      <input type="submit" class="submit button" value="Update task">
     </form>
 
     {% for todo in res %}
@@ -131,8 +129,8 @@
       <h5>{{ todo.srno }}</h5>
       <p>{{ todo.title }}</p>
       <div class="icons">
-        <a href="/edit_todo/{{todo.srno}}"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="/delete_todo/{{todo.srno}}"><i class="fa-solid fa-trash"></i></a>
+        <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href=""><i class="fa-solid fa-trash"></i></a>
       </div>
     </div>
     {% endfor %}

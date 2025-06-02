@@ -86,12 +86,12 @@
     <h2>Create Your ToDo Account</h2>
     <form method="post">
         {% csrf_token %}
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email Address" required />
-      <input type="password" placeholder="Password" required />
-      <button type="submit">Sign Up</button>
+      <input type="text" placeholder="Full Name" name="fnm" required />
+      <input type="email" placeholder="Email Address" name="email" required />
+      <input type="password" placeholder="Password" name="pwd" required />
+      <button type="submit" value="Signup" >Sign Up</button>
     </form>
-    <p>Already have an account? <a href="login.html" style="color: #ff6666; text-decoration: none;">Login here</a></p>
+    <p>Already have an account? <a href="/login" style="color: #ff6666; text-decoration: none;">Login here</a></p>
   </div>
 </body>
 </html>
